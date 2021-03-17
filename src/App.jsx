@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./styles/style.scss";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Paper Rock Scissors</h1>
+        <HomePage />
       </header>
     </div>
   );

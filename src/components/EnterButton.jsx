@@ -7,7 +7,7 @@ const EnterButton = ({ imageBattle, content }) => (
       <div className="enter-header-title">{content}</div>
     </div>
     <div className="enter-image">
-      <img src={imageBattle} className={imageBattle} />
+      <img src={imageBattle} className="enter-image-icons" />
     </div>
   </div>
 );

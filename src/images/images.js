@@ -1,5 +1,5 @@
-import createbattle from "../images/pages/createbattle.png";
-import joinbattle from "../images/pages/joinbattle.png";
+import createbattle from "../images/pages/createbattle.svg";
+import joinbattle from "../images/pages/joinbattle.svg";
 
 export default [
   {

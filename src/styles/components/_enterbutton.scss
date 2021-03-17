@@ -2,17 +2,29 @@
   display: flex;
   flex-direction: column;
   min-height: auto;
-  width: 50vh;
+  width: 55vh;
   background-color: #e8eaf6;
   margin: 0 3rem;
-  padding: 0.5rem 0.5rem;
+  padding: 2rem 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 6px 4px 4px $lightblue;
+  }
+
+  &:focus {
+    box-shadow: 6px 4px 4px $lightblue;
+  }
 
   .enter-image {
     width: 100%;
-
     text-align: center;
+
     .enter-image-icons {
       width: 40%;
+      height: 40%;
     }
   }
 
@@ -20,9 +32,22 @@
     padding: 2em 0;
     text-align: center;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     .enter-header-title {
       font-size: 45px;
       font-weight: 500;
     }
+  }
+}
+
+@keyframes fade {
+  from {
+    background-color: rgba(78, 96, 121, 0);
+  }
+  to {
+    background-color: rgba(78, 96, 121, 0.1);
   }
 }

@@ -6,6 +6,9 @@
 //Components
 @import "./components/headline";
 @import "./components/enterbutton";
+@import "./components/joinform";
 
 //Pages
-@import "./pages/homepage"
+@import "./pages/homepage";
+@import "./pages/createbattle";
+@import "./pages/joinbattle";

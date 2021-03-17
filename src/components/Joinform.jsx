@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Joinform = () => (
-  <div className="joinform-container">
-    <div className="joinform-title">Join Battle</div>
-    <div className="joinform-content">
-      <form>
-        <label htmlFor="join">
-          Join
-          <input type="text" name="join" />
-        </label>
-        <button type="submit" value="Join" />
-      </form>
+const Joinform = () => {
+  const [code, setCode] = useState("");
+
+  return (
+    <div className="joinform-container">
+      <div className="joinform-content">
+        <form>
+          <label htmlFor="join">
+            Join Battle
+            <input
+              id="join"
+              type="text"
+              value={code}
+              placeholder="Code"
+              onChange={(e) => setCode(e.target.value)}
+              required
+            />
+          </label>
+          <button type="submit" value="Join">
+            Join
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Joinform;

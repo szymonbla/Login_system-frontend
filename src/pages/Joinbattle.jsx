@@ -1,13 +1,14 @@
 import react from "react";
 import Headline from "../components/Headline";
+import Joinform from "../components/Joinform";
 
 const Joinbattle = () => {
   return (
     <div className="join-container">
-      <div className="join-header">
-        <Headline />
+      <Headline />
+      <div className="join-wrapper">
+        <Joinform />
       </div>
-      <div className="join-form"></div>
     </div>
   );
 };

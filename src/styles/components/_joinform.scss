@@ -1,0 +1,27 @@
+.joinform-container {
+  width: 100%;
+  min-height: 40vh;
+
+  .joinform-content {
+    text-align: center;
+    display: block;
+  }
+
+  .joinform-content label {
+    font-size: 25px;
+  }
+
+  .joinform-content input {
+    padding: 24px 16px 8px 16px;
+  }
+
+  .joinform-content button {
+    font-size: 25px;
+    background-color: $lightviolet;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 2rem;
+  }
+}

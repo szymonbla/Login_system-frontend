@@ -15,7 +15,7 @@ const Joinform = () => {
               id="join"
               type="text"
               value={code}
-              placeholder="Code"
+              placeholder="Type your code"
               onChange={(e) => setCode(e.target.value)}
               required
             />

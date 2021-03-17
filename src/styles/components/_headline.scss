@@ -1,28 +1,31 @@
 .headline-container {
-    min-width: 525px;
+  min-width: 525px;
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .headline-header {
+    font-size: 80px;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+
+  .headline-description {
+    margin: 2em 0;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
 
-    .headline-header {
-        font-size: 80px;
-        font-weight: 600;
-        margin: 3em 0;
-
+    .headline-description-title {
+      font-size: 50px;
+      font-weight: 500;
+      color: $lightblue;
+  
     }
 
-    .headline-description {
-
-
-        .headline-description-title {
-            font-size: 50px;
-            
-            
-        }
-
-        .headline-description-content {
-
-
-        }
-
+    .headline-description-content {
+      font-size: 35px;
     }
+  }
 }

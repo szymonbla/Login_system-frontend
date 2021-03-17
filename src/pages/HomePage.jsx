@@ -1,7 +1,7 @@
 import React from "react";
 import Headline from "../components/Headline";
 import EnterButton from "../components/EnterButton";
-import createbattle from "../images/createbattle.png";
+import images from "../images/images";
 
 const HomePage = () => {
   return (
@@ -10,8 +10,9 @@ const HomePage = () => {
         <div className="row">
           <Headline />
         </div>
-        <div className="row">
-          <EnterButton />
+        <div className="homepage-battle">
+          <EnterButton imageBattle={images[0].icon} content="Create a Battle" />
+          <EnterButton imageBattle={images[1].icon} content="Join Battle" />
         </div>
       </div>
     </div>

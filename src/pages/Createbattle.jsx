@@ -8,8 +8,8 @@ const Createbattle = () => {
         <Headline />
       </div>
       <div className="create-content">
-        <div className="column"></div>
-        <div className="column"></div>
+        <div className="column">Settings</div>
+        <div className="column">Refs</div>
       </div>
     </div>
   );

@@ -8,8 +8,21 @@ const Createbattle = () => {
         <Headline />
       </div>
       <div className="create-content">
-        <div className="column">Settings</div>
-        <div className="column">Refs</div>
+        <div className="column">
+          <div className="column-header">
+            <h1 className="column-header-title">Setting</h1>
+          </div>
+          <div className="column-wrapper"></div>
+        </div>
+        <div className="column">
+          <div className="column-header">
+            <h1 className="column-header-title">Invite friend</h1>
+          </div>
+          <div className="column-invite">
+            <div className="column-invite-code">Code: 478589</div>
+            <div className="column-invite-refs">refy</div>
+          </div>
+        </div>
       </div>
     </div>
   );

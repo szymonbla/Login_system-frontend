@@ -5,10 +5,12 @@ const Joinform = () => {
 
   return (
     <div className="joinform-container">
+      <div className="joinform-header">
+        <h1 className="joinform-title">Join Room</h1>
+      </div>
       <div className="joinform-content">
         <form>
           <label htmlFor="join">
-            Join Battle
             <input
               id="join"
               type="text"
@@ -18,10 +20,10 @@ const Joinform = () => {
               required
             />
           </label>
-          <button type="submit" value="Join">
-            Join
-          </button>
         </form>
+        <button type="submit" value="Join">
+          Join
+        </button>
       </div>
     </div>
   );

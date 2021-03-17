@@ -1,5 +1,7 @@
 import React from "react";
 import Headline from "../components/Headline";
+import EnterButton from "../components/EnterButton";
+import createbattle from "../images/createbattle.png";
 
 const HomePage = () => {
   return (
@@ -9,7 +11,7 @@ const HomePage = () => {
           <Headline />
         </div>
         <div className="row">
-          <Headline />
+          <EnterButton />
         </div>
       </div>
     </div>

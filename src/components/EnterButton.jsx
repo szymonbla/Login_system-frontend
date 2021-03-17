@@ -1,10 +1,11 @@
 import React from "react";
-import createbattle from "../images/createbattle.png";
 
-const EnterButton = () => (
+const EnterButton = (imageBattle) => (
   <div className="enter-contaienr">
     <div className="enter-image">
-      <img src={createbattle} alt="Create a Battle" className="enter-image" />
+      <img src={imageBattle} className={imageBattle} />
     </div>
   </div>
 );
+
+export default EnterButton;

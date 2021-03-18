@@ -1,5 +1,6 @@
-import react from "react";
+import React from "react";
 import Headline from "../components/Headline";
+import Createsetting from "../components/Createsetting";
 
 const Createbattle = () => {
   return (
@@ -12,7 +13,9 @@ const Createbattle = () => {
           <div className="column-header">
             <h1 className="column-header-title">Setting</h1>
           </div>
-          <div className="column-wrapper"></div>
+          <div className="column-wrapper">
+            <Createsetting />
+          </div>
         </div>
         <div className="column">
           <div className="column-header">

@@ -8,7 +8,9 @@ const Headline = () => (
     </Link>
     <div className="headline-description">
       <span className="headline-description-title">Welcome to</span>
-      <div className="headline-description-content">Web application which facilities you to settle all disputes</div>
+      <div className="headline-description-content">
+        Web application which facilities you to settle all disputes
+      </div>
     </div>
   </div>
 );

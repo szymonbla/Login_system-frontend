@@ -1,6 +1,7 @@
 import React from "react";
 import Slide from "../components/Slide";
 import Inputcomponent from "../components/Inputcomponent";
+import Rangeslider from "../components/Rangeslider";
 
 const Createsetting = () => (
   <div className="setting-container">
@@ -8,7 +9,7 @@ const Createsetting = () => (
       <Inputcomponent />
     </div>
     <div className="setting-limit">
-      <Slide />
+      <Rangeslider />
     </div>
     <div className="setting-breed">
       <Slide />

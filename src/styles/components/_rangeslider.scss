@@ -1,0 +1,32 @@
+.rangeslider-container {
+  & .rangeslider-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  & .rangeslider-field .rangeslider-value {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  & .rangeslider-field .rangeslider-value.left {
+    left: -18px;
+  }
+
+  & .rangeslider-field .rangeslider-value.right {
+    right: -25px;
+  }
+
+  & .rangeslider-field input {
+    -webkit-appearance: none;
+    height: 3px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+}

@@ -1,19 +1,28 @@
 .setting-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    .setting-nickname {
-        
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  width: 100%;
+  
 
-    .setting-limit {
+  .setting-nickname {
+    width: 90%;
+    display: block;
+  }
 
-    }
+  .setting-limit {
+      width: 90%;
+      display: block;
+  }
 
-    .setting-breed {
-
-    }
+  .setting-breed {
+      width: 90%;
+      display: block;
+  }
 }

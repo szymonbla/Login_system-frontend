@@ -7,8 +7,8 @@ const Inputcomponent = () => {
   return (
     <div className="input-component">
       <div className="input-container-form">
-        <form>
-          <label htmlFor="name">Nickname</label>
+        <form className="input-form">
+          <label>Nickname</label>
           <input
             type="text"
             id="name"

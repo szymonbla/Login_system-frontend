@@ -131,18 +131,24 @@ body {
 }
 
 .setting-container {
-  width: 90vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  text-align: center;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  align-self: center;
+  align-items: center;
 }
-.setting-container .setting-nickname {
+.input-component {
+  width: 100%;
+  margin: 0;
+}
+.input-component .input-component-form .input-form label {
+  border: none;
   background-color: aqua;
-  align-self: center;
 }
+.input-component .input-component-form .input-form input {
+  border: none;
+}
+
 .homepage-background-container .homepage-battle {
   display: flex;
   align-items: center;

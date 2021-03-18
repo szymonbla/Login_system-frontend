@@ -8,15 +8,15 @@ const Inputcomponent = () => {
     <div className="input-component">
       <div className="input-container-form">
         <form className="input-form">
-          <label>Nickname</label>
+          <label></label>
           <input
             type="text"
             id="name"
             value={name}
-            placeholder="Nickname"
             onChange={(e) => setName(e.target.value)}
             required
           />
+          <span className="placeholder">Enter nickname</span>
         </form>
       </div>
     </div>

@@ -6,6 +6,7 @@ const Inputcomponent = () => {
 
   return (
     <div className="input-component">
+      <div className="input-component-title">{name}</div>
       <div className="input-container-form">
         <form className="input-form">
           <label></label>

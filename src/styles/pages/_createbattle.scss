@@ -1,13 +1,10 @@
 .create-container {
-
-    
   .create-content {
     display: grid;
     min-height: 20vh;
     grid-template-columns: 80vh 45vh;
     grid-template-rows: 50vh;
-    grid-template-areas: 
-    "setting refs";
+    grid-template-areas: "setting refs";
     align-items: center;
     justify-content: center;
     column-gap: 5rem;
@@ -19,10 +16,8 @@
       align-items: center;
       justify-content: center;
 
-
       .column-header {
         width: 100%;
-        padding: 1rem 0;
         text-align: center;
 
         .column-header-title {
@@ -30,8 +25,6 @@
           color: $darkviolet;
         }
       }
-
-      
     }
   }
 }

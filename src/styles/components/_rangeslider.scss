@@ -7,6 +7,12 @@
     height: 100%;
   }
 
+  .rangeslider-current-value {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1rem;
+  }
+
   & .rangeslider-field .rangeslider-value {
     position: absolute;
     font-size: 20px;
@@ -23,7 +29,7 @@
 
   & .rangeslider-field input {
     -webkit-appearance: none;
-    height: 3px;
+    height: 10px;
     width: 100%;
     border: none;
     outline: none;

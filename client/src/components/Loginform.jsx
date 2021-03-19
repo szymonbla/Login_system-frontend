@@ -1,15 +1,28 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "./Utils/Button";
 
 const Loginform = () => {
   const [mail, setMail] = useState("");
   const [passwordReq, setPassword] = useState("");
 
+  const login = (e) => {
+    e.preventDefault();
+
+    const loggedin = {
+      email: mail,
+      password: passwordReq,
+    };
+
+    axios.post("http://localhost:5000/app/login", loggedin).then((response) => {
+      console.log(response.data);
+    });
+  };
+
   return (
     <div className="loginform-container">
       <div className="loginform-body">
-        <form className="login-form">
+        <form className="login-form" onChange={login}>
           <input
             type="email"
             placeholder="Email"
@@ -22,9 +35,8 @@ const Loginform = () => {
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Link to="/home">
-            <Button content="Login" />
-          </Link>
+
+          <Button content="Login" onChange={login} />
         </form>
       </div>
     </div>

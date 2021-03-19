@@ -5,7 +5,7 @@ const Rangeslider = () => {
 
   return (
     <div className="rangeslider-container">
-      <div className="rangeslider-current-value">{value}</div>
+      <div className="rangeslider-current-value">Ilość rund: {value}</div>
       <div className="rangeslider-field">
         <div className="rangeslider-value left">0</div>
         <input

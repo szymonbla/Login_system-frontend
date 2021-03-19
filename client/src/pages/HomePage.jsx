@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <div className="homepage-background-container">
             <div className="homepage-container">
               <div className="row">

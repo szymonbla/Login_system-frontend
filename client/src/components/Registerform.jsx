@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Button from "../components/Button";
+import Button from "./Utils/Button";
 
 const Registerform = () => {
   const [userName, setUserName] = useState("");

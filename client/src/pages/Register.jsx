@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import Headline from "../components/Headline";
-import Axios from "axios";
+import axios from "axios";
 
 const Register = () => {
   const [userName, setUserName] = useState("");
   const [mail, setMail] = useState("");
   const [passwordReq, setPassword] = useState("");
 
-  const register = () => {
-    Axios.post("http://localhost:5000/register", {
+  const register = (e) => {
+    e.preventDefault();
+
+    const registered = {
       username: userName,
       email: mail,
       password: passwordReq,
-    }).then((response) => {
-      console.log(response);
+    };
+
+    axios.post("http://localhost:5000/app/register", registered).then((response) => {
+      console.log(response.data);
     });
   };
 
@@ -23,10 +27,25 @@ const Register = () => {
         <Headline />
       </div>
       <div className="register-content">
-        <form>
-          <input type="text" placeholder="Username" onChange={(e) => setUserName(e.target.value)} />
-          <input type="email" placeholder="Email" onChange={(e) => setMail(e.target.value)} />
-          <input type="password" placeholder="" onChange={(e) => setPassword(e.target.value)} />
+        <form onSubmit={register}>
+          <input
+            type="text"
+            placeholder="Username"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={mail}
+            onChange={(e) => setMail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder=""
+            value={passwordReq}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <button onClick={register}>Register</button>
         </form>
       </div>

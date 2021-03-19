@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import Button from "../components/Button";
 
 const Registerform = () => {
   const [userName, setUserName] = useState("");
@@ -38,13 +40,13 @@ const Registerform = () => {
           />
           <input
             type="password"
-            placeholder=""
+            placeholder="Password"
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="register-button" onClick={register}>
-            Register
-          </button>
+          <Link to="/home">
+            <Button content="Register" onChange={register} />
+          </Link>
         </form>
       </div>
     </div>

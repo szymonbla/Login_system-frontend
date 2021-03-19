@@ -1,0 +1,35 @@
+.button-1 {
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: $lightviolet;
+  border: 2px solid $lightviolet;
+  font-size: 24px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+  &:hover {
+    background-color: $lightblue;
+    color: #fff;
+    border-bottom: 4px solid darken($lightblue, 10%);
+    cursor: pointer;
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

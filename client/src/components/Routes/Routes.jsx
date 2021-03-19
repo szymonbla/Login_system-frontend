@@ -6,6 +6,7 @@ const Joinbattle = React.lazy(() => import("../../pages/Joinbattle"));
 const Homepage = React.lazy(() => import("../../pages/HomePage"));
 const Landing = React.lazy(() => import("../../pages/Landing"));
 const Register = React.lazy(() => import("../../pages/Register"));
+const Login = React.lazy(() => import("../../pages/Login"));
 
 const Routes = () => (
   <Suspense fallback={<h1>Loading screen ...</h1>}>
@@ -14,7 +15,7 @@ const Routes = () => (
         <Landing />
       </Route>
       <Route path="/login">
-        <Landing />
+        <Login />
       </Route>
       <Route path="/register">
         <Register />

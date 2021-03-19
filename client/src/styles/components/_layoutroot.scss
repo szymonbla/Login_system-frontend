@@ -1,0 +1,50 @@
+.layout-container {
+  .layout-content {
+    display: grid;
+    min-height: 20vh;
+    grid-template-columns: 70vh 30vh;
+    grid-template-rows: 60vh;
+    grid-template-areas: "setting refs";
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 3rem;
+
+    .column {
+      background-color: #c5cae9;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      padding: 5rem 0;
+      border-radius: 5%;
+      justify-content: center;
+
+      &.left {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+        padding: 2rem;
+
+        .logo {
+          width: 40vh;
+        }
+
+        .logo-title {
+          font-size: 60px;
+          font-weight: 600;
+        }
+      }
+
+      &.right {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+        align-items: center;
+        justify-content: center;
+
+        .row {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

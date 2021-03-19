@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Headline from "../components/Headline";
-import Register from "../pages/Register";
+import Layoutroot from "../components/Layoutroot";
 
 const Landing = () => {
   return (
@@ -9,7 +8,11 @@ const Landing = () => {
       <div className="landing-header">
         <Headline />
       </div>
-      <div className="landing-body"></div>
+      <div className="landing-body">
+        <div className="landing-body-container">
+          <Layoutroot />
+        </div>
+      </div>
     </div>
   );
 };

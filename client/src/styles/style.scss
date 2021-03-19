@@ -4,18 +4,21 @@
 
 
 //Components
+@import "./components/utils/breedchooser";
+@import "./components/utils/inputcomponent";
+@import "./components/utils/slide";
+@import "./components/utils/rangeslider";
+@import "./components/utils/button";
+
 @import "./components/headline";
 @import "./components/enterbutton";
 @import "./components/joinform";
 @import "./components/createsetting";
-@import "./components/breedchooser";
-@import "./components/inputcomponent";
-@import "./components/slide";
-@import "./components/rangeslider";
 @import "./components/registerform";
-@import "./components/button";
+@import "./components/layoutroot";
 
 //Pages
 @import "./pages/homepage";
 @import "./pages/createbattle";
 @import "./pages/joinbattle";
+@import "./pages/register";

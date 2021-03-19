@@ -1,7 +1,7 @@
 import React from "react";
-import Slide from "../components/Slide";
-import Inputcomponent from "../components/Inputcomponent";
-import Rangeslider from "../components/Rangeslider";
+import Slide from "../components/Utils/Slide";
+import Inputcomponent from "../components/Utils/Inputcomponent";
+import Rangeslider from "../components/Utils/Rangeslider";
 
 const Createsetting = () => (
   <div className="setting-container">

@@ -17,7 +17,7 @@ const Inputcomponent = () => {
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <span className="placeholder">Enter nickname</span>
+          <span className="placeholder">Enter battle title</span>
         </form>
       </div>
     </div>

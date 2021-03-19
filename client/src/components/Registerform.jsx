@@ -23,7 +23,7 @@ const Registerform = () => {
   return (
     <div className="registerform-container">
       <div className="registerform-body">
-        <form>
+        <form className="register-form">
           <input
             type="text"
             placeholder="Username"
@@ -42,7 +42,9 @@ const Registerform = () => {
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={register}>Register</button>
+          <button className="register-button" onClick={register}>
+            Register
+          </button>
         </form>
       </div>
     </div>

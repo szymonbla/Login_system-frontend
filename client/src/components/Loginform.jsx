@@ -1,12 +1,13 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import auth from "./Auth";
 import Button from "./Utils/Button";
 
 const Loginform = () => {
   const [mail, setMail] = useState("");
   const [passwordReq, setPassword] = useState("");
 
-  const login = (e) => {
+  const login = async (e, props) => {
     e.preventDefault();
 
     const loggedin = {
@@ -14,8 +15,12 @@ const Loginform = () => {
       password: passwordReq,
     };
 
-    axios.post("http://localhost:5000/app/login", loggedin).then((response) => {
+    await axios.post("http://localhost:5000/app/login", loggedin).then((response) => {
       console.log(response.data);
+    });
+
+    auth.login(() => {
+      props.history.push("/home");
     });
   };
 

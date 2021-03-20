@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+import Privateroute from "../Routes/Privateroute";
 
 const Createbattle = React.lazy(() => import("../../pages/Createbattle"));
 const Joinbattle = React.lazy(() => import("../../pages/Joinbattle"));
@@ -20,16 +21,11 @@ const Routes = () => (
       <Route path="/register">
         <Register />
       </Route>
-      <Route path="/home">
-        <Homepage />
-      </Route>
-      <Route path="/create">
-        <Createbattle />
-      </Route>
-      <Route path="/join">
-        <Joinbattle />
-      </Route>
     </Switch>
+
+    <Privateroute component={<Createbattle />} path="/create" />
+    <Privateroute component={<Homepage />} path="/home" />
+    <Privateroute component={<Joinbattle />} path="/join" />
   </Suspense>
 );
 

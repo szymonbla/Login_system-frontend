@@ -22,7 +22,7 @@ const Loginform = () => {
   return (
     <div className="loginform-container">
       <div className="loginform-body">
-        <form className="login-form" onChange={login}>
+        <form className="login-form">
           <input
             type="email"
             placeholder="Email"
@@ -36,7 +36,7 @@ const Loginform = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <Button content="Login" onChange={login} />
+          <Button content="Login" fun={login} />
         </form>
       </div>
     </div>

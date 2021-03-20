@@ -44,9 +44,8 @@ const Registerform = () => {
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Link to="/home">
-            <Button content="Register" onChange={register} />
-          </Link>
+
+          <Button content="Register" onChange={register} />
         </form>
       </div>
     </div>

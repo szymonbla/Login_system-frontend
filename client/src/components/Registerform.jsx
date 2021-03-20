@@ -44,8 +44,7 @@ const Registerform = () => {
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-
-          <Button content="Register" onChange={register} />
+          <Button content="Register" fun={register} />
         </form>
       </div>
     </div>

@@ -8,6 +8,7 @@ const Homepage = React.lazy(() => import("../../pages/HomePage"));
 const Landing = React.lazy(() => import("../../pages/Landing"));
 const Register = React.lazy(() => import("../../pages/Register"));
 const Login = React.lazy(() => import("../../pages/Login"));
+const Notfound = React.lazy(() => import("../../pages/Notfound"));
 
 const Routes = () => (
   <Suspense fallback={<h1>Loading screen ...</h1>}>
@@ -22,9 +23,9 @@ const Routes = () => (
         <Register />
       </Route>
 
-      <Privateroute component={<Homepage />} path="/home" />
-      <Privateroute component={<Joinbattle />} path="/join" />
-      <Privateroute component={<Createbattle />} path="/create" />
+      <Privateroute component={Homepage} path="/home" />
+      <Privateroute component={Joinbattle} path="/join" />
+      <Privateroute component={Createbattle} path="/create" />
 
       <Route path="*">
         <Notfound />

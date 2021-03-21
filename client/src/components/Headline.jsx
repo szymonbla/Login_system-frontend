@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Headline = () => (
   <div className="headline-container">
-    <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to="/home" style={{ textDecoration: "none", color: "inherit" }}>
       <span className="headline-header">Rock, Paper, Scissors</span>
     </Link>
     <div className="headline-description">

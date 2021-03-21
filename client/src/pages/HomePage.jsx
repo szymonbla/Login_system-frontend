@@ -5,7 +5,6 @@ import EnterButton from "../components/EnterButton";
 import images from "../images/images";
 import Createbattle from "../pages/Createbattle";
 import Joinbattle from "../pages/Joinbattle";
-import axios from "axios";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const HomePage = () => {

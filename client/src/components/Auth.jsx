@@ -1,5 +1,5 @@
 import axios from "axios";
-class Auth {
+export class Auth {
   constructor() {
     this.authenticated = false;
   }
@@ -11,16 +11,16 @@ class Auth {
         console.log(this.authenticated);
       } else {
         this.authenticated = true;
-        console.log(response.data);
         localStorage.setItem("token", response.data.token);
+        console.log(response.data);
         console.log(this.authenticated);
-        this.authenticated = true;
       }
     });
   };
 
   logout() {
     this.authenticated = false;
+    localStorage.removeItem("token");
   }
 
   isAuthenticated() {

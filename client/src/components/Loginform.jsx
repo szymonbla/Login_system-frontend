@@ -24,7 +24,6 @@ const Loginform = (props) => {
 
   return (
     <div className="loginform-container">
-      {auth.isAuthenticated() ? <button>Jaen</button> : <h1>Przyjedzie pora na glodomora</h1>}
       <div className="loginform-body">
         <form className="login-form">
           <input

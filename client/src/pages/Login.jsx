@@ -1,8 +1,22 @@
 import React, { useEffect } from "react";
 import Loginform from "../components/Loginform";
 import Headline from "../components/Headline";
+import axios from "axios";
+import auth from "../components/Auth";
+import { withRouter } from "react-router";
 
-const Login = () => {
+const Login = (props) => {
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/app/isAuth", {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+      });
+  });
   return (
     <div className="login-container">
       <div className="login-header">
@@ -15,4 +29,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withRouter(Login);

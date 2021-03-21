@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import auth from "./Auth";
 import Button from "./Utils/Button";
 
@@ -7,7 +8,7 @@ const Loginform = () => {
   const [mail, setMail] = useState("");
   const [passwordReq, setPassword] = useState("");
 
-  const login = async (e, props) => {
+  const login = async (e) => {
     e.preventDefault();
 
     const loggedin = {
@@ -16,11 +17,17 @@ const Loginform = () => {
     };
 
     await axios.post("http://localhost:5000/app/login", loggedin).then((response) => {
-      console.log(response.data);
-    });
-
-    auth.login(() => {
-      props.history.push("/home");
+      if (!response.data.auth) {
+        console.log(response.data);
+        auth.logout();
+        console.log(auth.isAuthenticated());
+      } else {
+        console.log(response.data);
+        auth.loginfun();
+        localStorage.setItem("token", response.data.token);
+        auth.loginfun();
+        console.log(auth.isAuthenticated());
+      }
     });
   };
 
@@ -40,10 +47,19 @@ const Loginform = () => {
             value={passwordReq}
             onChange={(e) => setPassword(e.target.value)}
           />
-
-          <Button content="Login" fun={login} />
+          <Link to="/home">
+            <Button content="Login" fun={login} />
+          </Link>
         </form>
       </div>
+
+      {auth.isAuthenticated() ? (
+        <Link to="/home">
+          <button>Jaen</button>
+        </Link>
+      ) : (
+        <h1>Nie jestes tak dobry</h1>
+      )}
     </div>
   );
 };

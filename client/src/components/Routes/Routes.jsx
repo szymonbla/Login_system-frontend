@@ -21,11 +21,11 @@ const Routes = () => (
       <Route path="/register">
         <Register />
       </Route>
-    </Switch>
 
-    <Privateroute component={<Createbattle />} path="/create" />
-    <Privateroute component={<Homepage />} path="/home" />
-    <Privateroute component={<Joinbattle />} path="/join" />
+      <Privateroute component={<Homepage />} path="/home" />
+      <Privateroute component={<Joinbattle />} path="/join" />
+      <Privateroute component={<Createbattle />} path="/create" />
+    </Switch>
   </Suspense>
 );
 

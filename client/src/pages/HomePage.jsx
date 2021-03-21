@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { withRouter } from "react-router";
 import Headline from "../components/Headline";
 import EnterButton from "../components/EnterButton";
 import images from "../images/images";
 import Createbattle from "../pages/Createbattle";
 import Joinbattle from "../pages/Joinbattle";
-
+import axios from "axios";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -39,4 +40,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default withRouter(HomePage);

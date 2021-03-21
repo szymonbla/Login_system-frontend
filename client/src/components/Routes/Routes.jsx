@@ -25,6 +25,10 @@ const Routes = () => (
       <Privateroute component={<Homepage />} path="/home" />
       <Privateroute component={<Joinbattle />} path="/join" />
       <Privateroute component={<Createbattle />} path="/create" />
+
+      <Route path="*">
+        <Notfound />
+      </Route>
     </Switch>
   </Suspense>
 );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import Headline from "../components/Headline";
 import EnterButton from "../components/EnterButton";
+import Button from "../components/Utils/Button";
 import images from "../images/images";
 import Createbattle from "../pages/Createbattle";
 import Joinbattle from "../pages/Joinbattle";
@@ -9,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import axios from "axios";
 import auth from "../components/Auth";
 
-const HomePage = () => {
+const HomePage = (props) => {
   const [name, setName] = useState("");
 
   useEffect(() => {
@@ -23,8 +24,17 @@ const HomePage = () => {
         console.log(response);
         auth.isloggedin();
         console.log(auth.isAuthenticated());
+
+        console.log(response.data.user);
+        setName(response.data.user.username);
       });
   });
+
+  const handleLogout = () => {
+    auth.logout();
+    props.history.push("/");
+    console.log("Zostales wylogowany");
+  };
 
   return (
     <Router>
@@ -33,8 +43,12 @@ const HomePage = () => {
           <div className="homepage-background-container">
             <div className="homepage-container">
               <div className="row">
-                <Headline />
-                {name};
+                <div className="col left">
+                  <Headline content={name} />
+                </div>
+                <div className="col right">
+                  <Button content="Log out" fun={handleLogout} />
+                </div>
               </div>
               <div className="homepage-battle">
                 <Link to="/create" style={{ textDecoration: "none", color: "inherit" }}>

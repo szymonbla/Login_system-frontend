@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const EnterButton = ({ imageBattle, content }) => (
   <div className="enter-tail">
@@ -14,7 +14,7 @@ const EnterButton = ({ imageBattle, content }) => (
 
 export default EnterButton;
 
-EnterButton.PropTypes = {
-  imageBattle: PropTypes.array.isRequired,
-  content: PropTypes.string.isRequired,
+EnterButton.propTypes = {
+  imageBattle: propTypes.string.isRequired,
+  content: propTypes.string.isRequired,
 };

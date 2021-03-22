@@ -6,15 +6,22 @@ import auth from "../components/Auth";
 import { withRouter } from "react-router";
 
 const Login = (props) => {
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get("http://localhost:5000/app/isAuth", {
         headers: {
           "x-access-token": localStorage.getItem("token"),
         },
       })
       .then((response) => {
-        localStorage.clear();
+        if (localStorage.getItem("token")) {
+          auth.isloggedin();
+          console.log(auth.isAuthenticated());
+          props.history.push("/home");
+        } else {
+          localStorage.clear();
+          console.log(auth.isAuthenticated());
+        }
       });
   });
   return (

@@ -14,7 +14,7 @@ const Login = (props) => {
         },
       })
       .then((response) => {
-        console.log(response.data);
+        localStorage.clear();
       });
   });
   return (

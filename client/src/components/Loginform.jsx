@@ -17,6 +17,7 @@ const Loginform = (props) => {
     };
 
     await auth.login(loggedin);
+
     if (auth.isAuthenticated() === true) {
       props.history.push("/home");
     }

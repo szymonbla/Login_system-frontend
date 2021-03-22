@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Loginform from "../components/Loginform";
 import Headline from "../components/Headline";
 import axios from "axios";
 import auth from "../components/Auth";
 import { withRouter } from "react-router";
+import Button from "../components/Utils/Button";
 
 const Login = (props) => {
   useEffect(async () => {
@@ -24,13 +26,19 @@ const Login = (props) => {
         }
       });
   });
+
   return (
     <div className="login-container">
       <div className="login-header">
-        <Headline content="Login to create battle" />
+        <Headline content="Login to create battle" link="/" />
       </div>
       <div className="login-content">
         <Loginform />
+        <div className="login-to-home">
+          <Link to="/">
+            <Button content="Back" />
+          </Link>
+        </div>
       </div>
     </div>
   );

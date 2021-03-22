@@ -43,12 +43,7 @@ const HomePage = (props) => {
           <div className="homepage-background-container">
             <div className="homepage-container">
               <div className="row">
-                <div className="col left">
-                  <Headline title={name} />
-                </div>
-                <div className="col right">
-                  <Button content="Log out" fun={handleLogout} />
-                </div>
+                <Headline title={name} />
               </div>
               <div className="homepage-battle">
                 <Link to="/create" style={{ textDecoration: "none", color: "inherit" }}>
@@ -57,6 +52,9 @@ const HomePage = (props) => {
                 <Link to="/join" style={{ textDecoration: "none", color: "inherit" }}>
                   <EnterButton imageBattle={images[1].icon} content="Join Battle" />
                 </Link>
+              </div>
+              <div className="homepage-logout">
+                <Button content="Log out" fun={handleLogout} />
               </div>
             </div>
           </div>

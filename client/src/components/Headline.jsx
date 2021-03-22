@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
-const Headline = ({ title, content }) => (
+const Headline = ({ title, content, link = "/home" }) => (
   <div className="headline-container">
-    <Link to="/home" style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to={link} style={{ textDecoration: "none", color: "inherit" }}>
       <span className="headline-header">Rock, Paper, Scissors</span>
     </Link>
     <div className="headline-description">
@@ -21,4 +21,5 @@ export default Headline;
 Headline.propTypes = {
   title: propTypes.string,
   content: propTypes.string,
+  link: propTypes.string,
 };

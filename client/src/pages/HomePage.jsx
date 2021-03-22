@@ -44,7 +44,7 @@ const HomePage = (props) => {
             <div className="homepage-container">
               <div className="row">
                 <div className="col left">
-                  <Headline content={name} />
+                  <Headline title={name} />
                 </div>
                 <div className="col right">
                   <Button content="Log out" fun={handleLogout} />

@@ -27,7 +27,7 @@ const Login = (props) => {
   return (
     <div className="login-container">
       <div className="login-header">
-        <Headline />
+        <Headline content="Login to create battle" />
       </div>
       <div className="login-content">
         <Loginform />

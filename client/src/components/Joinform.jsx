@@ -17,6 +17,7 @@ const Joinform = () => {
               value={code}
               placeholder="Type your code"
               onChange={(e) => setCode(e.target.value)}
+              maxlength="6"
               required
             />
           </label>

@@ -34,36 +34,24 @@ const HomePage = (props) => {
   };
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/home">
-          <div className="homepage-background-container">
-            <div className="homepage-container">
-              <div className="row">
-                <Headline title={name} />
-              </div>
-              <div className="homepage-battle">
-                <Link to="/create" style={{ textDecoration: "none", color: "inherit" }}>
-                  <EnterButton imageBattle={images[0].icon} content="Create a Battle" />
-                </Link>
-                <Link to="/join" style={{ textDecoration: "none", color: "inherit" }}>
-                  <EnterButton imageBattle={images[1].icon} content="Join Battle" />
-                </Link>
-              </div>
-              <div className="homepage-logout">
-                <Button content="Log out" fun={handleLogout} />
-              </div>
-            </div>
-          </div>
-        </Route>
-        <Route path="/create">
-          <Createbattle />
-        </Route>
-        <Route path="/join">
-          <Joinbattle />
-        </Route>
-      </Switch>
-    </Router>
+    <div className="homepage-background-container">
+      <div className="homepage-container">
+        <div className="row">
+          <Headline title={name} />
+        </div>
+        <div className="homepage-battle">
+          <Link to="/create" style={{ textDecoration: "none", color: "inherit" }}>
+            <EnterButton imageBattle={images[0].icon} content="Create a Battle" />
+          </Link>
+          <Link to="/join" style={{ textDecoration: "none", color: "inherit" }}>
+            <EnterButton imageBattle={images[1].icon} content="Join Battle" />
+          </Link>
+        </div>
+        <div className="homepage-logout">
+          <Button content="Log out" fun={handleLogout} />
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -37,8 +37,8 @@ const Createbattle = () => {
                   </form>
                 </div>
               </div>
-              <div className="setting-limit">{/* <Rangeslider /> */}</div>
-              <div className="setting-breed">{/* <Slide /> */}</div>
+              <div className="setting-limit"></div>
+              <div className="setting-breed"></div>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ const Createbattle = () => {
         </div>
       </div>
       <div className="create-button">
-        <Link onClick={(event) => (!tag ? event.preventDefault() : null)} to={`/battle?tag=${tag}`}>
+        <Link onClick={(e) => (!tag ? e.preventDefault() : null)} to={`/battle?tag=${tag}`}>
           <Button content="Create a battle" />
         </Link>
       </div>

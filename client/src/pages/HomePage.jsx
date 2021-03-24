@@ -21,14 +21,11 @@ const HomePage = (props) => {
         },
       })
       .then((response) => {
-        console.log(response);
         auth.isloggedin();
-        console.log(auth.isAuthenticated());
-
-        console.log(response.data.user);
+        console.log(response.data);
         setName(response.data.user.username);
       });
-  });
+  }, []);
 
   const handleLogout = () => {
     auth.logout();

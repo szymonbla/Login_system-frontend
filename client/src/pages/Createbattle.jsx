@@ -19,16 +19,27 @@ const Createbattle = () => {
             <h1 className="column-header-title">Setting</h1>
           </div>
           <div className="column-wrapper">
-            <Createsetting />
-            <Inputcomponent name={setTag} />
-            <input
-              type="text"
-              id="name"
-              value={tag}
-              onChange={(e) => setTag(e.target.value)}
-              maxLength="6"
-              required
-            />
+            <div className="setting-container">
+              <div className="setting-nickname">
+                <div className="input-component-title">{tag}</div>
+                <div className="input-container-form">
+                  <form className="input-form">
+                    <label></label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={tag}
+                      onChange={(e) => setTag(e.target.value)}
+                      maxLength="6"
+                      required
+                    />
+                    <span className="placeholder">Enter battle title</span>
+                  </form>
+                </div>
+              </div>
+              <div className="setting-limit">{/* <Rangeslider /> */}</div>
+              <div className="setting-breed">{/* <Slide /> */}</div>
+            </div>
           </div>
         </div>
         <div className="column">

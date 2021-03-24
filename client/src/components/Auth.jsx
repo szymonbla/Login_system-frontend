@@ -1,7 +1,7 @@
 import axios from "axios";
 export class Auth {
   constructor() {
-    this.authenticated = true;
+    this.authenticated = false;
   }
 
   isloggedin() {

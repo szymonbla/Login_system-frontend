@@ -9,14 +9,19 @@ export class Auth {
   }
 
   login = async (loggedin) => {
-    await axios.post("http://localhost:5000/app/login", loggedin).then((response) => {
-      if (!response.data.auth) {
-        console.log(response.data.error);
-      } else {
-        this.authenticated = true;
-        localStorage.setItem("token", response.data.token);
-      }
-    });
+    await axios
+      .post("http://localhost:5000/app/login", loggedin)
+      .then((response) => {
+        if (!response.data.auth) {
+          console.log(response.data.error);
+        } else {
+          this.authenticated = true;
+          localStorage.setItem("token", response.data.token);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   logout() {

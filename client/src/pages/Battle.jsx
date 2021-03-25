@@ -15,6 +15,11 @@ const Battle = ({ location }) => {
     setName(tag);
     console.log(tag);
     console.log(socket);
+
+    return () => {
+      socket.on("disconnect");
+      socket.off();
+    };
   }, [ENDPOINT_TO_BACKEND]);
 
   return <h1>Battle page</h1>;

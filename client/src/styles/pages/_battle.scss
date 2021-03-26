@@ -1,0 +1,18 @@
+.battle-container {
+  .battle-header {
+    .battle-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .battle-main {
+    .battle-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+}

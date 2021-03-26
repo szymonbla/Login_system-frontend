@@ -55,6 +55,7 @@ const Battle = ({ location }) => {
         </div>
       </div>
       <div className="battle-main">
+        <div className="battle-column"></div>
         <div className="battle-column">
           <div className="battle-user">{user}</div>
           <div className="battle-choice">

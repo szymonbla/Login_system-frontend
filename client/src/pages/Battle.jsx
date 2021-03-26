@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string"; // It helps to retrive data from the URL
 import * as io from "socket.io-client";
 import axios from "axios";
+import Button from "../components/Utils/Button";
 
 let socket;
 
@@ -22,14 +23,12 @@ const Battle = ({ location }) => {
       });
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     const { tag } = queryString.parse(location.search);
     socket = io(ENDPOINT_TO_BACKEND);
 
-    await reqApi();
+    reqApi();
     setName(tag);
-    console.log(tag);
-    console.log(socket);
     return () => {
       socket.on("disconnect");
       socket.off();
@@ -37,13 +36,27 @@ const Battle = ({ location }) => {
   }, [ENDPOINT_TO_BACKEND]);
 
   useEffect(() => {
-    socket.emit("data", { name, user });
-  }, [user]);
+    socket.emit("props_room", { name });
+    socket.emit("user_data", { user });
+  }, [user, name]);
 
   return (
-    <h1>
-      Battle page {name}, {user}
-    </h1>
+    <div className="battle-container">
+      <div className="battle-header">
+        <div className="battle-title">
+          <h1 className="battle-title-content">{name}</h1>
+          <div className="battle-disconnect">
+            <Button content="Left battle" />
+          </div>
+        </div>
+      </div>
+      <div className="battle-main">
+        <div className="battle-column">
+          <div className="battle-user">{user}</div>
+          <div className="battle-choice"></div>
+        </div>
+      </div>
+    </div>
   );
 };
 

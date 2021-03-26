@@ -3,6 +3,8 @@ import queryString from "query-string"; // It helps to retrive data from the URL
 import * as io from "socket.io-client";
 import axios from "axios";
 import Button from "../components/Utils/Button";
+import Choicecomponent from "../components/Utils/Choicecomponent";
+import createbattle from "../images/pages/createbattle.svg";
 
 let socket;
 
@@ -53,7 +55,14 @@ const Battle = ({ location }) => {
       <div className="battle-main">
         <div className="battle-column">
           <div className="battle-user">{user}</div>
-          <div className="battle-choice"></div>
+          <div className="battle-choice">
+            <Choicecomponent source={createbattle} name="rock" />
+            <Choicecomponent source={createbattle} name="papier" />
+            <Choicecomponent source={createbattle} name="scissors" />
+          </div>
+          <div className="battle-submit">
+            <button type="submit">Zapisz swoje odpowiedzi</button>
+          </div>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 const Choicecomponent = ({ source, name }) => (
   <>
-    <input type="image" alt="image" id={name} src={source} width="100px" />
+    <input type="image" alt={name} id={name} src={source} width="100px" />
   </>
 );
 

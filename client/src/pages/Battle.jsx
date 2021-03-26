@@ -4,7 +4,9 @@ import * as io from "socket.io-client";
 import axios from "axios";
 import Button from "../components/Utils/Button";
 import Choicecomponent from "../components/Utils/Choicecomponent";
-import createbattle from "../images/pages/createbattle.svg";
+import rockIcon from "../images/pages/hand.svg";
+import papierIcon from "../images/pages/hello.svg";
+import scissorsIcon from "../images/pages/finger.svg";
 
 let socket;
 
@@ -56,9 +58,9 @@ const Battle = ({ location }) => {
         <div className="battle-column">
           <div className="battle-user">{user}</div>
           <div className="battle-choice">
-            <Choicecomponent source={createbattle} name="rock" />
-            <Choicecomponent source={createbattle} name="papier" />
-            <Choicecomponent source={createbattle} name="scissors" />
+            <Choicecomponent source={rockIcon} name="rock" />
+            <Choicecomponent source={papierIcon} name="papier" />
+            <Choicecomponent source={scissorsIcon} name="scissors" />
           </div>
           <div className="battle-submit">
             <button type="submit">Zapisz swoje odpowiedzi</button>

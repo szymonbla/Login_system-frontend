@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Utils/Button";
-import logo from "../images/pages/rock.png";
+import logo from "../images/pages/logo.svg";
 
 const Layoutroot = () => (
   <div className="layout-container">

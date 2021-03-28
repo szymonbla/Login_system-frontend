@@ -37,7 +37,7 @@ const Battle = ({ location }) => {
       socket.on("disconnect");
       socket.off();
     };
-  }, [ENDPOINT_TO_BACKEND]);
+  }, [ENDPOINT_TO_BACKEND, location.search]);
 
   useEffect(() => {
     socket.emit("props_room", { name });

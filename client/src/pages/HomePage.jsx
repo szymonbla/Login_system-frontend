@@ -40,12 +40,8 @@ const HomePage = (props) => {
           <Headline title={name} />
         </div>
         <div className="homepage-battle">
-          <Link to="/create" style={{ textDecoration: "none", color: "inherit" }}>
-            <EnterButton imageBattle={images[0].icon} content="Create a Battle" />
-          </Link>
-          <Link to="/join" style={{ textDecoration: "none", color: "inherit" }}>
-            <EnterButton imageBattle={images[1].icon} content="Join Battle" />
-          </Link>
+          <EnterButton imageBattle={images[0].icon} content="You are authenticated" />
+          <EnterButton imageBattle={images[1].icon} content="Well done!" />
         </div>
         <div className="homepage-logout">
           <Button content="Log out" fun={handleLogout} />

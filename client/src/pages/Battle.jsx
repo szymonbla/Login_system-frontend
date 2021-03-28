@@ -27,23 +27,6 @@ const Battle = ({ location }) => {
       });
   };
 
-  useEffect(() => {
-    const { tag } = queryString.parse(location.search);
-    socket = io(ENDPOINT_TO_BACKEND);
-
-    reqApi();
-    setName(tag);
-    return () => {
-      socket.on("disconnect");
-      socket.off();
-    };
-  }, [ENDPOINT_TO_BACKEND, location.search]);
-
-  useEffect(() => {
-    socket.emit("props_room", { name });
-    socket.emit("user_data", { user });
-  }, [user, name]);
-
   return (
     <div className="battle-container">
       <div className="battle-header">

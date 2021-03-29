@@ -1,10 +1,3 @@
-# Rock, paper, scissors
-
-Project with login and register system, using JWT Token. 
-Technology stack:
-- React
-- Node
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
